@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Div Builder</title>
+
+		<link rel="stylesheet" href="./src/css/styles_DivBuilder.css">
+		<h1>Generate div for Menu Item</h1>
+	</head>
+
+	<body>
+		<div id='form-container'>
+			<form id='form' onsubmit="generate(); return false;">
+				<div id="input-container">
+					Upgrade Price:  $<input type="text" name="upgr" id="upgr" value="">			<br/>
+					Menu Item Name: <input type="text" name="name" id="name" value="" required><br/>
+					Menu Item Desc: <input type="text" name="desc" id="desc" value="" required><br/>
+					<br/><br/><br/>
+					<input type="submit" value="Generate" onClick='console.log("test")'>
+				</div>
+				<br/><br/><br/>
+				<div id='display-container'>
+					Preview Menu Item:
+					<br/><br/>
+					<label for="text" id="preview-text"></label>
+					<br/><br/>
+					Preview HTML Div
+					<br/>
+					<textarea id="preview-div" name="" cols="80" rows="6"></textarea>
+				</div>
+			</form>
+		</div>
+		<script src="./src/tools/BuildDiv.js"></script>
+	</body>
+</html>
