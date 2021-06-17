@@ -21,7 +21,7 @@ function createWindow() {
 			}
 		})
 	win.loadURL(url.format({
-		pathname:path.join(__dirname,'main.html'),
+		pathname:path.join(__dirname,'./html/home.html'),
 		protocol: 'file',
 		slashes: true
 	}))
