@@ -3,19 +3,46 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CD Tool</title>
-
-		<div id ="header"> </div>
-		<script>
-				document.getElementById("header").innerHTML='<object type="text/html" data="imports/header.html" ></object>';
-		</script>
-
-		<h1>Choose which tool you need</h1>
-		<a href="main.html">Home</a>
-		<a href="tool_divBuilder.html">Div Builder</a>
-		<a href="tool_foBuilder.html">FO Builder</a>
+		<title>Formsite Tools</title>
+		<link rel="stylesheet" href="../src/css/styles_cdBuilder.css">
 	</head>
 
 	<body>
+		<div id='header-container'>
+			<h1 id="header-text">Test Header</h1>
+			<div>
+				<a href="./home.html">[Home]</a>
+				<a href="./tool_divBuilder.html">[DIV Builder]</a>
+			</div>
+		</div>
+
+		<div id="form-container">
+			<form id='form' onsubmit="generate_cd(); return false;">
+				<div id='input-container'>
+					<div id='input-left'>
+						<br>
+						How Many Guests: <input type="number" id="input-numGuests">
+						<br>
+						Menu Name: <input type="text" id='input-menuName'>
+						<br>
+						Item Name: <input type="text" id='input-itemName'>
+						<br>
+						<br>
+						<button onclick='tool_addMenuItemsCD()'>Add to CD</button>
+					</div>
+
+					<div id='input-right'>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="../src/tools/BuildCD.js"></script>
 	</body>
+
+	<footer>
+		<div id="footer-container">
+			<h1 id="footer-text">Test Footer</h1>
+		</div>
+	</footer>
 </html>
