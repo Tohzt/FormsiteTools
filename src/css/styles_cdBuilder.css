@@ -1,63 +1,3 @@
-html {
-	max-width: 600px;
-	overflow-x: hidden;
-	text-align:center;
-	background-color: rgb(247, 244, 237);
-}
-
-body {
-	position: fixed;
-	top: 100px;
-	margin: 0px;
-	padding: 0px 100px 0px 0px;
-}
-
-h1 {
-	margin: 0px;
-	padding: 0px;
-}
-
-/* BODY */
-.body-frame {
-	width: 600px;
-	height: 550px;
-	margin: 0px;
-	padding: 0px;
-}
-
-/* HEADER */
-#header-container {
-	margin: 0px;
-	padding: 0px;
-	width: 600px;
-	height: 100px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgb(34, 134, 244);
-}
-
-#header-text {
-	color: white;
-}
-
-/* FOOTER */
-#footer-container {
-	margin: 0px;
-	padding: 0px;
-	width: 600px;
-	height: 50px;
-	position:fixed;
-	bottom:0;
-	left:0;
-	background-color: rgb(34, 134, 244);
-	vertical-align: middle;
-}
-
-#footer-text {
-	color: white;
-}
-
 /* CD BUILDER */
 #form-container {
 	width: 600px;
@@ -73,24 +13,31 @@ h1 {
 	padding: 0px;
 }
 
-#input-left {
+#input-top {
 	margin: auto;
-	width: 300px;
-	height: 550px;
+	height: 400px;
 	padding: 0px;
-	float: left;
+	float: top;
 }
 
 #input-numGuests {
 	width: 50px;
 }
 
-#input-right {
+#display-bottom {
 	border-width: 3px;
 	margin: auto;
-	width: 300px;
-	height: 550px;
+	height: 150px;
 	padding: 0px;
-	float: right;
+	float: bottom;
 	background-color: lightblue;
+}
+
+#item-list {
+	background-color: red;
+	padding: 10px;
+}
+
+#input-item {
+	margin: 5px;
 }

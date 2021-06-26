@@ -4,8 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Formsite Tools</title>
+		<link rel="stylesheet" href="../src/css/styles_default.css">
 		<link rel="stylesheet" href="../src/css/styles_cdBuilder.css">
 	</head>
+	<!--  -->
 
 	<body>
 		<div id='header-container'>
@@ -17,24 +19,61 @@
 		</div>
 
 		<div id="form-container">
-			<form id='form' onsubmit="generate_cd(); return false;">
-				<div id='input-container'>
-					<div id='input-left'>
+			<div id='input-container'>
+				<div id='input-top'>
+					<!-- INITIALIZE FORM -->
+					<form id='form' name='form' onsubmit="generate_cd(); return false;">
 						<br>
 						How Many Guests: <input type="number" id="input-numGuests">
 						<br>
-						Menu Name: <input type="text" id='input-menuName'>
+						Menu: <input type="text" id='input-menuName'>
+						<br><br>
+						Enter Items Below:
+						<div id='item-list'></div>
 						<br>
+						<!-- BUTTON - INC/DEC NUMBER OF INPUTS -->
+						<div id='btn-containter input-numInputs'>
+							<button onclick='inc_itemList()'>(+)</button>
+							 / 
+							<button onclick='dec_itemList()'>(-)</button>
+						</div>
+						<br><br>
+						<!--
 						Item Name: <input type="text" id='input-itemName'>
-						<br>
-						<br>
+						  -->
+						<br><br>
+						<button id='btn-testPrint' onclick='print_items()'>Test Pring</button>
+						<br><br>
 						<button onclick='tool_addMenuItemsCD()'>Add to CD</button>
-					</div>
-
-					<div id='input-right'>
-					</div>
+					</form>
+						<br><br>
+						<button onclick='form_disable()'>disable</button>
 				</div>
-			</form>
+
+				<div id='display-bottom'>
+					<form onsubmit="return addItem( this.inputItem)"> 
+						<input type="text" id="inputItem" placeholder="Enter a Task">
+						<input type="submit">
+					</form>
+					<ul id="list"></ul>
+					<script>
+						var str = "";
+
+						function addItem( inputField) { 
+							// Add To String
+							str = str.concat(inputField.value);
+							str = str.concat(",");
+							console.log(str);
+
+							// Clear Input
+							document.getElementById('inputItem').value = ''
+
+							// Stop Submission
+							return false; 
+						}
+					</script>
+				</div>
+			</div>
 		</div>
 
 		<script src="../src/tools/BuildCD.js"></script>
@@ -46,3 +85,4 @@
 		</div>
 	</footer>
 </html>
+
