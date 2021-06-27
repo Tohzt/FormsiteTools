@@ -4,9 +4,9 @@ function tool_addMenuItemsCD() {
 
 function generate_cd() {
 	//Init File Handling
-	var $ = require('jquery');
-	var fs = require('fs');
-	var filename = './src/tools/div_FrameUp.txt';
+	//var $ = require('jquery');
+	//var fs = require('fs');
+	//var filename = './src/tools/div_FrameUp.txt';
 
 	// Init Variables
 	var guest_current = 1;
@@ -20,6 +20,23 @@ function generate_cd() {
 
 		// Add Guest Number to CD-head
 		str_1 = str_1.replace(/#/g,guest_current.toString());
+		
+		// GET LIST OF INPUTS
+		var list = document.getElementById('item-list');
+		var items = list.getElementsByTagName('*');
+
+		// LOOP THROUGH LIST
+		if (items.length > 0) {
+			for (var j = 0; j < items.length; ++j) {
+				console.log(j);
+				console.log(items.length);
+				str_1 = str_1.concat("{{G", i.toString(), "_", items[j].value.toString(), "}}");
+			}
+		}
+
+		/** ADD MENU ITEMS **/
+		//str_1 = str_1.concat("{{G", i.toString(), "_", get_items(), "}}");
+
 		console.log(str_1);
 		console.log("");
 
@@ -27,6 +44,7 @@ function generate_cd() {
 		guest_current++;
 	}
 }
+
 
 // DISABLE PART OF FORM(s)
 function form_disable() {
@@ -46,7 +64,7 @@ function inc_itemList() {
 	newItem.setAttribute('id', 'input-item');
 
 	//newItem.innerText = "test";
-	
+
 	// ADD NEW ITEM TO LSIT
 	list.appendChild(newItem);
 	// STOP SUBMISSION
@@ -55,28 +73,17 @@ function inc_itemList() {
 function dec_itemList() {
 	// IDENTIFY LIST
 	var list = document.getElementById('item-list');
-	
-	/**ERROR DETECTION**/
 
-	// REMOVE ITEM FROM LIST
-	list.removeChild(list.lastChild);
+	// CHECK FOR EMPTY LIST
+	if (list.childElementCount > 0) {
 
+		// REMOVE ITEM FROM LIST
+		list.removeChild(list.lastChild);
+	}
+	else {
+		alert("There are no items");
+	}
 	// STOP SUBMISSION
 	return false; 
 }
 
-// PRINT LIST OF ITEMS
-function print_items() {
-	var list = document.getElementById('item-list');
-	var ans = "";
-	var items = list.getElementsByTagName('*');
-
-	// LOOP THROUGH LIST
-	var i, e, d;
-	for (i = 0; i < items.length; ++i) {
-		e = items[i];
-		ans = ans.concat(e.value.toString());
-	}
-
-	console.log(ans);
-}
