@@ -22,11 +22,11 @@
 			<div id='input-container'>
 				<div id='input-top'>
 					<!-- INITIALIZE FORM -->
-					<form id='form' name='form' onsubmit="generate_cd(); return false;">
+					<form id='form' name='form' onsubmit="return false;">
 						<br>
 						How Many Guests: <input type="number" id="input-numGuests">
 						<br>
-						Menu: <input type="text" id='input-menuName'>
+						Menu: <input type="text" id='input-menu'>
 						<br><br>
 						Enter Items Below:
 						<br>
@@ -42,32 +42,12 @@
 						Item Name: <input type="text" id='input-itemName'>
 						  -->
 						<br><br>
-						<button onclick='tool_addMenuItemsCD()'>Add to CD</button>
+						<button onclick='generate_cd()'>Generate</button>
 					</form>
 				</div>
 
 				<div id='display-bottom'>
-					<form onsubmit="return addItem( this.inputItem)"> 
-						<input type="text" id="inputItem" placeholder="Enter a Task">
-						<input type="submit">
-					</form>
-					<ul id="list"></ul>
-					<script>
-						var str = "";
-
-						function addItem( inputField) { 
-							// Add To String
-							str = str.concat(inputField.value);
-							str = str.concat(",");
-							console.log(str);
-
-							// Clear Input
-							document.getElementById('inputItem').value = ''
-
-							// Stop Submission
-							return false; 
-						}
-					</script>
+					<p id='preview-cd'></p>
 				</div>
 			</div>
 		</div>
