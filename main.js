@@ -1,6 +1,6 @@
 /*
  * Author: Tohzt
- * Purpose: Learning?
+ * Description: This is a development tool for generating FormSite data
  */
 
 const { app, BrowserWindow, Menu } = require('electron');
@@ -15,6 +15,7 @@ function createWindow() {
 		{
 			width :600,
 			height:700,
+			useContentSize: true,
 			webPreferences: {
 				nodeIntegration: true,
 				contextIsolation: false,

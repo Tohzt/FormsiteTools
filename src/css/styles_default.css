@@ -7,8 +7,8 @@ html {
 body {
 	position: fixed;
 	top: 100px;
-	margin: 0px;
-	padding: 0px 100px 0px 0px;
+	margin: auto;
+	padding: auto;
 	background-color: rgb(247, 244, 237);
 }
 
@@ -40,6 +40,12 @@ h1 {
 
 #header-text {
 	color: white;
+}
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	color: lightblue;
 }
 
 /* FOOTER */

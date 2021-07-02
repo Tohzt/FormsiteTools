@@ -8,7 +8,7 @@ function generate_cd() {
 	for (var i = 1; i <= guest_count; i++) {
 
 		// INIT STRING (RFF Eventually..)
-		var str = "{{IfG#}}{{G#Name}}{{G#Colon}}";
+		var str = "<b>{{IfG#}}{{G#Name}}{{G#Colon}}</b>";
 
 		// ADD GUEST NUMBER TO INITIAL STRING
 		str = str.replace(/#/g,guest_current.toString());
@@ -33,13 +33,13 @@ function generate_cd() {
 
 		// ADD 'SPECIAL' INFORMATION
 		str = str.concat(
-			"{{G",
+			"<b>{{G",
 			guest_current,
-			"<b>_SpecialHeader}}{{G</b>",
+			"_SpecialHeader}}</b>{{G",
 			guest_current,
 			"_Special}}{{G",
 			guest_current,
-			"_Slash}}\n"
+			"_Slash}}<br>"
 		);
 
 		// UPDATE
