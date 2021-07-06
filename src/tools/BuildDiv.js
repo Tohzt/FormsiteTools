@@ -8,8 +8,8 @@ function generate() {
 	// Init Preleaded Text (RFF Eventually..)
 	var _startToUpgr = "<div><span style=\"font-weight:bold;color: red\">Upgrade (Additional $";
 	var _upgrToName  = " + tax):</span></div><div><span style=\"font-family:Times New Roman;\”><span style=\"font-size: 18px;\"><strong>";
-	var _nameToDesc  = "</strong></span></span><span style=\"font-family:Times New Roman, Italic;\”><span style=\"font-size: 14px;\”>(";
-	var _descToEnd   = ")</span></span></div>";
+	var _nameToDesc  = "</strong></span></span><span style=\"font-family:Times New Roman, Italic;\”><span style=\"font-size: 14px;\”><i> (";
+	var _descToEnd   = ")</i></span></span></div>";
 
 	// Get User Input
 	var _upgr = document.getElementById('upgr').value;
