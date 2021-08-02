@@ -22,20 +22,44 @@
 
 		<!-- BODY -->
 		<script src="../src/scripts/test.js"></script>
+		<script src="../src/scripts/get_data.js"></script>
 		<div id="body-container">
 			<br>
 			<!-- Add or Remove Gondoliers -->
-			<div id="addRem-container">
-				<div id="firstName-container">
-					<input id="first-name" type="text">
-				</div>
-				<div id="lastName-container">
-					<input id="last-name" type="text">
+			<div id="input-container">
+				<div id="name-container">
+					<input id="input-name" type="text" onkeypress="check_name()">
+					<div id="autocomplete">
+						<label id="name-complete" title="afds"></label>
+					</div>
 				</div>
 			</div>
-			<div id="test-container">
-				<button onclick='test_getAll_GAIh()'>Sum GAI gondolier Hours</button>
-				<button onclick='test_zeroOut()'>Zero Out</button>
+
+			<br>
+			<!-- Evalualte Data -->
+			<div id="test-container" class="flex-grid">
+				<div class="col">
+					<button onclick='get_data("GAI_Hours")'>GAI h</button>
+					<button onclick='get_data("GAI_Tips")'>GAI t</button>
+				</div>
+				<div class="col">
+					<button onclick='get_data("GCON_Hours")'>GCON h</button>
+					<button onclick='get_data("GCON_Tips")'>GCON t</button>
+				</div>
+				<div class="col">
+					<button onclick='get_data("Office")'>Office</button>
+				</div>
+				<div class="col">
+					<button onclick='get_data("Other1")'>Oth_1</button>
+					<button onclick='get_data("Other2")'>Oth_2</button>
+				</div>
+				<div class="col">
+					<button onclick='get_data("Training")'>Training</button>
+				</div>
+				<br>
+				<div class="col">
+					<button onclick='test_zeroOut()'>Zero Out</button>
+				</div>
 			</div>
 			<br>
 			<div id="io-container">
