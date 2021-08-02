@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Formsite Tools</title>
+		<title>Payrol</title>
 
 		<link rel="stylesheet" href="../src/css/styles_default.css">
 		<link rel="stylesheet" href="../src/css/styles_home.css">
@@ -13,16 +13,37 @@
 		<!-- HEADER -->
 		<div id='header-container'>
 			<br>
-			<h1 id="header-text">Tool Selection</h1>
+			<h1 id="header-text">Payroll</h1>
 			<br>
 			<div id='nav-container'>
 				<a href="./home.html" class="disabled">[Home]</a>
-				<a href="./divBuilder.html">[Div Builder]</a>
-				<a href="./cdBuilder.html">[CD Builder]</a>
-				<a href="./foBuilder.html">[FO Builder]</a>
 			</div>
 		</div>
-		<p>Testing</p>
+
+		<!-- BODY -->
+		<script src="../src/scripts/test.js"></script>
+		<div id="body-container">
+			<br>
+			<!-- Add or Remove Gondoliers -->
+			<div id="addRem-container">
+				<div id="firstName-container">
+					<input id="first-name" type="text">
+				</div>
+				<div id="lastName-container">
+					<input id="last-name" type="text">
+				</div>
+			</div>
+			<div id="test-container">
+				<button onclick='test_getAll_GAIh()'>Sum GAI gondolier Hours</button>
+				<button onclick='test_zeroOut()'>Zero Out</button>
+			</div>
+			<br>
+			<div id="io-container">
+				<button onclick='test_init()'>Init</button>
+				<button onclick='test_read()'>Read</button>
+				<button onclick='test_add()'>Add</button>
+			</div>
+		</div>
 	</body>
 
 	<footer>
@@ -31,3 +52,5 @@
 		</div>
 	</footer>
 </html>
+
+

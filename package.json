@@ -1,5 +1,5 @@
 {
-	"name": "tut",
+	"name": "PayrollApplication",
 	"version": "1.0.0",
 	"description": "",
 	"main": "main.js",
@@ -7,7 +7,7 @@
 		"start": "electron .",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "tohzt",
+	"author": "TOHZT",
 	"license": "ISC",
 	"dependencies": {
 		"browserify": "^17.0.0",

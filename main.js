@@ -4,6 +4,7 @@
  */
 
 const { app, BrowserWindow, Menu } = require('electron');
+const electronReload = require('electron-reload');
 
 // Main Process
 const path = require('path')
@@ -13,8 +14,8 @@ let win
 function createWindow() {
 	win = new BrowserWindow(
 		{
-			width :600,
-			height:700,
+			width :800,
+			height:600,
 			useContentSize: true,
 			webPreferences: {
 				nodeIntegration: true,
@@ -31,7 +32,7 @@ function createWindow() {
 		win = null
 	})
 
-	//win.openDevTools()
+	win.openDevTools()
 }
 
 app.on('ready', createWindow)
@@ -47,3 +48,7 @@ app.on('activate', () => {
 		createWindow()
 	}
 })
+
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+});

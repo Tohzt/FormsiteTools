@@ -1,2 +1,27 @@
-body {
+
+#addRem-container {
+	display: flex;
+	flex-direction: column;
 }
+
+#firstName-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#lastName-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#test-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#io-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
